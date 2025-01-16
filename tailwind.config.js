@@ -38,6 +38,10 @@ export default {
       padding: {
         '433px': '433px',
       },
+      fontFamily:{
+        'Hubot': ['serif', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'montserrat': ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans'],
+      }
     },
   },
   plugins: [],

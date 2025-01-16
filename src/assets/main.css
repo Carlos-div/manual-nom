@@ -9,6 +9,10 @@
   Keep calm! 
 
 */ 
+/* HUBOT */
+@import url('https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Jersey+15&family=League+Spartan:wght@100..900&family=Lexend+Zetta:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* MONTSERRAT */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Lexend+Zetta:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Quicksand:wght@300..700&display=swap');
 
 
 .card {
@@ -21,12 +25,14 @@
   border-radius: 20px;
   margin-bottom: 25px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .card h2 {
-  z-index: 1;
+  z-index: 2; 
   color: white;
   font-size: large;
+  position: relative; 
 }
 
 .card::before {
@@ -37,13 +43,13 @@
   height: 130%;
   animation: rotBGimg 6s linear infinite;
   transition: all 0.4s linear;
+  z-index: 0; 
 }
 
 @keyframes rotBGimg {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
@@ -55,5 +61,5 @@
   background: rgb(44, 44, 43);
   inset: 5px;
   border-radius: 15px;
-}  
-
+  z-index: 0; 
+}
