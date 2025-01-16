@@ -1,5 +1,5 @@
 <template>
-        
+     <div :class="{ dark: isDarkMode }">   
   <div class="flex justify-center items-center">
     <RouterLink to="/" class="">    
       <button class="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-montserrat group" type="button">
@@ -14,12 +14,19 @@
     </RouterLink>
   </div>
         <!--Contenido :)-->
-       <h1 class="font-montserrat mt-36 text-4xl">En preparación tutorial de videolecciones</h1>
+       <h1 class="font-montserrat mt-36 text-4xl dark:text-white text-gray-900">En preparación tutorial de videolecciones</h1>
    
+        <!--Video Tutorial
+        <div class="relative"> 
+          <video src="/public/video.mp4" controls class="w-full h-screen mt-10 rounded-lg shadow-lg"></video> 
+        </div>
+        -->
+      </div>
+
 </template>
 
 <script setup>
-
+import { isDarkMode, toggleDarkMode } from '../darkMode';
 </script>
 
 <style lang="scss" scoped>
