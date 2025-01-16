@@ -1,0 +1,59 @@
+@import './base.css';
+
+/* NOTA
+
+  Si la página se ve en dos secciones o diferentes secciones, aquí apareceran unos estilos que tendrás que borrar o modificar para que se vea bien.
+  Si la página se ve bien en dos secciones, no necesitarás hacer nada.
+
+
+  Keep calm! 
+
+*/ 
+
+
+.card {
+  background: #292828;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.card h2 {
+  z-index: 1;
+  color: white;
+  font-size: large;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  background-image: linear-gradient(180deg, rgb(228, 174, 27), rgb(216, 203, 143));
+  height: 130%;
+  animation: rotBGimg 6s linear infinite;
+  transition: all 0.4s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  background: rgb(44, 44, 43);
+  inset: 5px;
+  border-radius: 15px;
+}  
+
