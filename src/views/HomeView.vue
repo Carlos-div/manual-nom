@@ -2,15 +2,15 @@
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-4 mt-12 z-10 w-192 h-192 md:w-256 md:h-256 lg:w-320 lg:h-320">
+  <div class="grid grid-cols-4 gap-4 mt-12 z-10 w-192 h-192 md:w-192 md:h-192 lg:w-256 lg:h-256 xl:w-320 xl:h-320">
   
 
     <!--Asignaciones-->
     <RouterLink :to="{ path: 'asignaciones', hash: '#asignaciones' }" class="card transform hover:scale-110 transition duration-500 drop-shadow-2xl">
-      <div class="absolute left-1/2 transform -translate-x-1/2 z-10 text-2xl text-center rounded-sm pt-1 pl-2 text-white font-montserrat uppercase">
+      <div class="responsive-card">
         Asignaciones
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="absolute z-10 flex justify-center bottom-32" style="fill: rgba(0, 0, 0, 1);">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="absolute z-10 flex justify-center md:bottom-12 lg:bottom-20 xl:bottom-32" style="fill: rgba(0, 0, 0, 1);">
         <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
         <path d="m9 17 8-5-8-5z"></path>
       </svg>
@@ -19,10 +19,10 @@
 
   <!--Incidencias-->
   <RouterLink :to="{ path: 'incidencias', hash: '#incidencias'}" class="card transform hover:scale-110 transition duration-500">
-    <div class="absolute left-1/2 transform -translate-x-1/2 z-10 text-2xl text-center rounded-sm pt-1 pl-2 text-white font-montserrat uppercase">
+    <div class="responsive-card">
       Incidencias
     </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="absolute z-10 flex justify-center bottom-32" style="fill: rgba(0, 0, 0, 1);">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="absolute z-10 flex justify-center md:bottom-12 lg:bottom-20 xl:bottom-32" style="fill: rgba(0, 0, 0, 1);">
       <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
       <path d="m9 17 8-5-8-5z"></path>
       </svg>
@@ -30,10 +30,10 @@
  
   <!--tercer-->
   <div class="card transform hover:scale-110 transition duration-500 relative">
-    <div class="absolute left-1/2 transform -translate-x-1/2 z-10 text-2xl text-center rounded-sm pt-1 pl-2 text-white font-montserrat uppercase">
-      LOS DEMÁS
+    <div class="responsive-card">
+      Otros
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="absolute z-10 flex justify-center bottom-32" style="fill: rgba(0, 0, 0, 1);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="absolute z-10 flex justify-center md:bottom-12 lg:bottom-20 xl:bottom-32" style="fill: rgba(0, 0, 0, 1);">
       <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
       <path d="m9 17 8-5-8-5z"></path>
       </svg>

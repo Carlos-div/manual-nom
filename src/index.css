@@ -2,3 +2,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .responsive-card {
+    @apply absolute left-1/2 transform -translate-x-1/2 z-10 md:text-base lg:text-xl xl:text-2xl text-center rounded-sm pt-1 pl-2 text-white font-montserrat uppercase;
+  }
+}
+
+@layer utilities {
+    .translate-x-12 
+    { 
+        @apply translate-x-[10%];  
+    } 
+    .translate-x-24 
+    { 
+        @apply translate-x-[40%];  
+    } .translate-x-32 
+    { 
+        @apply translate-x-[90%]; 
+    } 
+}

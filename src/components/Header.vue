@@ -5,8 +5,8 @@
         Bienvenido al manual de ayuda para el sistema de Nómina en el SIPRE de los CUSAEM
       </h1>
 
-      <div class="checkbox-wrapper-51 ml-4">
-        <input id="cbx-51" type="checkbox" @change="toggleDarkMode">
+      <div class="checkbox-wrapper-51 md:mr-12 lg:mr-8 xl:ml-4">
+        <input id="cbx-51" type="checkbox" @change="handleDarkModeToggle">
         <label class="toggle" for="cbx-51">
           <span>
             <svg viewBox="0 0 10 10" height="10px" width="10px">
@@ -17,16 +17,41 @@
       </div>
     </div>
 
+    <div v-if="showInstruction" class="instruction-message md:translate-x-12 lg:translate-x-24 xl:translate-x-32 md:text-sm xl:text-md">
+      Presiona el botón para activar el modo oscuro 👇🏻
+    </div>
+
     <img :src="isDarkMode ? '/public/black.jpg' : '/public/fondo.jpg'" alt="fondo de prueba" class="absolute inset-0 w-full h-full object-cover -z-10">
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { isDarkMode, toggleDarkMode } from '../darkMode';
+
+// Ref para controlar la visibilidad del mensaje de instrucción
+const showInstruction = ref(true);
+
+const handleDarkModeToggle = () => {
+  toggleDarkMode();
+  showInstruction.value = false; // Ocultar mensaje de instrucción después de hacer clic
+};
 </script>
 
+
+
 <style lang="scss" scoped>
-/* From Uiverse.io by PriyanshuGupta28 */ 
+.instruction-message {
+  position: absolute;
+  top: 20px;
+  left: 60%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 20;
+}
+
 .checkbox-wrapper-51 input[type="checkbox"] {
   visibility: hidden;
   display: none;
@@ -50,7 +75,7 @@ import { isDarkMode, toggleDarkMode } from '../darkMode';
   width: 40px;
   height: 22px;
   display: block;
-  background: #c8ccd4;
+  background: #8691a7;
   border-radius: 12px;
   transition: background 0.2s ease;
 }
