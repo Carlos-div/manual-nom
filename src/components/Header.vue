@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div v-if="showInstruction" class="instruction-message md:translate-x-12 lg:translate-x-24 xl:translate-x-32 md:text-sm xl:text-md">
+    <div v-if="showInstruction" class="instruction-message md:translate-x-12 lg:translate-x-24 xl:translate-x-32 2xl:translate-x-40 md:text-sm xl:text-md">
       Presiona el botón para activar el modo oscuro 👇🏻
     </div>
 
@@ -47,7 +47,7 @@ const handleDarkModeToggle = () => {
   left: 60%;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 5px;
   z-index: 20;
 }

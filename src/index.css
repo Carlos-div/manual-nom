@@ -16,9 +16,14 @@
     } 
     .translate-x-24 
     { 
-        @apply translate-x-[40%];  
+        @apply translate-x-[30%];  
     } .translate-x-32 
     { 
-        @apply translate-x-[90%]; 
+        @apply translate-x-[70%]; 
     } 
+    .translate-x-40
+    {
+      @apply translate-x-[100%];
+    }
 }
+
